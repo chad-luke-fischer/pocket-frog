@@ -1,0 +1,116 @@
+/* Pocket Frog stylesheet. Loaded into a shadow DOM so it doesn't bleed into
+   the host page (Obsidian, etc.). Inlined into the build via __STYLESHEET___ */
+
+#frog {
+	position: fixed;
+	z-index: 99999;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	cursor: pointer;
+	pointer-events: auto;
+	transition: left 80ms linear, bottom 80ms linear;
+	transform-origin: center bottom;
+}
+
+.frog-menu {
+	position: fixed;
+	z-index: 100000;
+	background: rgba(20, 20, 20, 0.92);
+	color: #f0f0f0;
+	font-family: 'Monocraft', 'Courier New', monospace;
+	font-size: 14px;
+	padding: 8px 0;
+	border: 2px solid #5fbf3f;
+	border-radius: 4px;
+	min-width: 160px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+	user-select: none;
+}
+
+.frog-menu-item {
+	padding: 6px 16px;
+	cursor: pointer;
+}
+
+.frog-menu-item:hover {
+	background: rgba(95, 191, 63, 0.25);
+}
+
+.frog-field-guide {
+	position: fixed;
+	z-index: 100001;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(20, 20, 20, 0.96);
+	color: #f0f0f0;
+	font-family: 'Monocraft', 'Courier New', monospace;
+	padding: 16px;
+	border: 2px solid #5fbf3f;
+	border-radius: 6px;
+	min-width: 320px;
+	max-width: 560px;
+	max-height: 80vh;
+	overflow-y: auto;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.frog-field-guide-title {
+	font-size: 18px;
+	margin-bottom: 12px;
+	text-align: center;
+	border-bottom: 1px solid #5fbf3f;
+	padding-bottom: 8px;
+}
+
+.frog-field-guide-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+
+.frog-field-guide-card {
+	background: rgba(40, 40, 40, 0.6);
+	border: 1px solid #444;
+	padding: 8px;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 4px;
+	transition: border-color 80ms ease;
+}
+
+.frog-field-guide-card:hover {
+	border-color: #5fbf3f;
+}
+
+.frog-field-guide-card.active {
+	border-color: #86d35a;
+	background: rgba(95, 191, 63, 0.15);
+}
+
+.frog-field-guide-card canvas {
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	width: 64px;
+	height: 64px;
+	display: block;
+	margin: 0 auto 4px;
+}
+
+.frog-field-guide-card-name {
+	font-size: 12px;
+	margin-top: 2px;
+}
+
+.frog-field-guide-close {
+	display: block;
+	margin: 12px auto 0;
+	padding: 6px 16px;
+	background: #5fbf3f;
+	color: #1a1a1a;
+	border: none;
+	font-family: inherit;
+	font-size: 13px;
+	cursor: pointer;
+	border-radius: 3px;
+}

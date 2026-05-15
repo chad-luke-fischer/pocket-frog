@@ -1,0 +1,16 @@
+{
+	"name": "pocket-frog",
+	"version": "1.0.0",
+	"description": "A pixel-art frog that hops around your Obsidian notes. Plays nicely with Pocket Bird and lets you generate new species via Claude.",
+	"license": "MPL-2.0",
+	"author": "Chad Fischer",
+	"type": "module",
+	"scripts": {
+		"build": "node build.js",
+		"dev": "nodemon --watch src --watch package.json --watch build.js --exec \"npm run build\""
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.10",
+		"rollup": "^4.52.5"
+	}
+}

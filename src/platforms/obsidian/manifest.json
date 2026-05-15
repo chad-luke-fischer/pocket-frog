@@ -1,0 +1,10 @@
+{
+	"id": "pocket-frog",
+	"name": "Pocket Frog",
+	"version": "__VERSION__",
+	"minAppVersion": "0.15.0",
+	"description": "A pixel-art frog that hops around your notes. Generate custom species with Claude. Plays well with Pocket Bird.",
+	"author": "Chad Fischer",
+	"authorUrl": "https://github.com/IdreesInc/Pocket-Bird",
+	"isDesktopOnly": false
+}
