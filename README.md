@@ -7,6 +7,8 @@ A pixel-art frog that hops around your Obsidian notes. Click to pet it, swap bet
 If you also have [Pocket Bird](https://github.com/IdreesInc/Pocket-Bird) enabled, the frog notices the bird and reacts.
 
 ## Install
+<img width="158" height="122" alt="Screenshot 2026-05-14 225548" src="https://github.com/user-attachments/assets/030b71e2-2cbd-4786-b793-20607b3fd722" />
+
 
 1. Build:
    ```
