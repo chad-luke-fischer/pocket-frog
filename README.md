@@ -1,3 +1,5 @@
+<img width="1280" height="720" alt="pocket-frog-thumb" src="https://github.com/user-attachments/assets/58d58527-13f8-4e66-a6cd-2be65f7b79be" />
+
 # Pocket Frog
 
 A pixel-art frog that hops around your Obsidian notes. Click to pet it, swap between species in the Field Guide, and generate brand-new species on demand using Claude.
