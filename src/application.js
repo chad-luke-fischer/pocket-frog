@@ -111,6 +111,7 @@ export async function initializeApplication(ctx) {
 	});
 
 	wireFrogClick();
+	wireFrogHover();
 	wireMouseTracking();
 
 	setInterval(tick, UPDATE_INTERVAL);
@@ -354,6 +355,33 @@ function wireFrogClick() {
 
 function triggerHeart() {
 	frog.setAnimation(Animations.HEART);
+}
+
+const RIBBIT_ID = "frog-ribbit";
+const RIBBIT_COOLDOWN = 900;
+let ribbitOnCooldown = false;
+
+function wireFrogHover() {
+	const el = frog.getElement();
+	el.addEventListener("mouseenter", () => {
+		if (ribbitOnCooldown) return;
+		ribbitOnCooldown = true;
+		setTimeout(() => { ribbitOnCooldown = false; }, RIBBIT_COOLDOWN);
+		showRibbit();
+	});
+}
+
+function showRibbit() {
+	const root = getShadowRoot();
+	const existing = root.getElementById?.(RIBBIT_ID) ?? root.querySelector("#" + RIBBIT_ID);
+	if (existing) existing.remove();
+
+	const bubble = makeElement("frog-ribbit", "Ribbit!", RIBBIT_ID);
+	const r = frog.getElement().getBoundingClientRect();
+	bubble.style.left = `${r.left + r.width / 2}px`;
+	bubble.style.bottom = `${window.innerHeight - r.top + 6}px`;
+	root.appendChild(bubble);
+	setTimeout(() => bubble.remove(), RIBBIT_COOLDOWN);
 }
 
 function wireMouseTracking() {

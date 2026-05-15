@@ -114,3 +114,26 @@
 	cursor: pointer;
 	border-radius: 3px;
 }
+
+.frog-ribbit {
+	position: fixed;
+	z-index: 100000;
+	background: rgba(20, 20, 20, 0.92);
+	color: #f0f0f0;
+	font-family: 'Monocraft', 'Courier New', monospace;
+	font-size: 13px;
+	padding: 4px 10px;
+	border: 2px solid #5fbf3f;
+	border-radius: 6px;
+	transform: translateX(-50%);
+	pointer-events: none;
+	user-select: none;
+	animation: frog-ribbit-pop 900ms ease-out forwards;
+}
+
+@keyframes frog-ribbit-pop {
+	0%   { opacity: 0; transform: translateX(-50%) translateY(6px); }
+	20%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+	70%  { opacity: 1; transform: translateX(-50%) translateY(-2px); }
+	100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+}
