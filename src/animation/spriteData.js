@@ -100,7 +100,7 @@ const MID_HOP = parseGrid([
 	"...OBBBBBBBBBmmmmmmBBBBBBBBBO...",
 	"..OBBbbbbbbbbbbbbbbbbbbbbbbBBO..",
 	".OBbbbbbbbbbbbbbbbbbbbbbbbbbBO..",
-	".Obbbbbbbbbbbbbbbbbbbbbbbbbbbo..",
+	".ObbbbbbbbbbbbbbbbbbbbbbbbbbbO..",
 	".OBubbbbbbbbbbbbbbbbbbbbbbbuBO..",
 	"..OBuubbbbbbbbbbbbbbbbbbbuuBO...",
 	"..OOuuuuOOOOOOOOOOOOOOOOuuuuOO..",
